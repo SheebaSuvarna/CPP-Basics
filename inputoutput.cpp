@@ -1,6 +1,13 @@
 #include<iostream> //cout,cin
 #include<cstdio> //printf and scanf
 #include<string>
+
+//macro definition
+#define i 1000 
+#define PRINT_SQUARE(x)  \
+    int result = (x) * (x); \
+    std::cout << "The square of " << (x) << " is " << result << std::endl
+
 using namespace std;
 int main(){
 
@@ -25,7 +32,12 @@ int main(){
     cout << "Enter your Full Name: ";
     cin.ignore(); // This is important to ignore the leftover newline character from previous input
     getline(cin,str);
-    cout << "Welcome to CPP-BAsics " << str;
+    cout << "Welcome to CPP-BAsics " << str << endl;
+
+    int res = i+a;
+    cout << "usage of macro " << res << endl;
+    cout << "FInd the square of number using macro " << endl;
+    PRINT_SQUARE(a); //calls the macro definition 
 
     return(0);
 }
